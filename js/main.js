@@ -55,9 +55,9 @@ function handlecard() {
     card.addEventListener("mouseover", (e) => {
       const icon = card.querySelector(".card-icon");
       icon.classList.add("active");
-      setTimeout(() => {
+      card.addEventListener("mouseleave", (e) => {
         icon.classList.remove("active");
-      }, 2000);
+      })
     });
   });
 }
